@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld';
+import Frase from './components/Frase';
 
 function App() {
   const name = "Alliny"
@@ -15,8 +16,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Olá React!</h1>
+      <h2>Alterando o JSX!</h2>
+      <p>Olá, {newName}</p>
+      <p>Soma: {sum(1, 2)}</p>
+      <img src={url} alt="Minha Imagem" />
       <p>Meu primeiro app utilizando React :)</p>
+      <HelloWorld/>
+      <Frase/>
+      <Frase/>
     </div>
   );
 }
