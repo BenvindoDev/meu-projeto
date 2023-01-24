@@ -1,31 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import HelloWorld from './components/HelloWorld';
-import Frase from './components/Frase';
-
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 function App() {
-  const name = "Alliny"
 
-  const newName = name.toLocaleUpperCase()
-  
-  function sum(a, b) {
-    return a + b
-  }
-
-  const url = "https://via.placeholder.com/150"
+  const nome = "Caleb"
 
   return (
     <div className="App">
-      <h2>Alterando o JSX!</h2>
-      <p>Olá, {newName}</p>
-      <p>Soma: {sum(1, 2)}</p>
-      <img src={url} alt="Minha Imagem" />
-      <p>Meu primeiro app utilizando React :)</p>
-      <HelloWorld/>
-      <Frase/>
-      <Frase/>
+      <SayMyName nome="Leonardo" />
+      <SayMyName nome="Alliny" />
+      <SayMyName nome={nome} />
+      <Pessoa
+        nome="Kariny"
+        idade="25"
+        profissao="Auxiliar Admnistrativo"
+        foto="https://via.placeholder.com/150"
+      />
     </div>
-  );
+  )
 }
 
 export default App;
